@@ -1,22 +1,76 @@
-<html> 
-     <head> 
-            <title> Tymur Aranzhii 2p</title>
-                <script language="JavaScript"> 
-             function WinOpen_zadanie3_aran()  
-               { 
-window.open("zadanie5.html","toolbar=no,directories=no,menubar=no,height=550,width=550,top=200,left=400"); 
-               } 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5</title>
 
-function okno_zamknij()  
-                       { 
-                             window.close() 
-                       } 
-          </script> 
-      </head> 
-<body> 
-   <form> 
-        <input type="button_z5" name="zadanie5.html" value="zadanie5-Tymur Aranzhii" onclick="WinOpen_zadanie5(' ')"> 
-        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/> 
-    </form> 
-</body> 
+    <style>
+        p{
+        color: grey;
+        font-size: 20px;
+        font-weight: bolder;
+        }
+
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function okno_zamknij_aran(){
+            window.close();
+        }
+
+    function WinOpen_aran_1(){
+       
+        window.open("grafika1_aran.html", "grafika1",
+        "toolbar=no,directories=no,menubar=no,height=300,width=200,top=0,left=0");
+    }
+
+    function WinOpen_aran_2(){
+        
+        let w = 200;
+        let h = 300;
+        let left = screen.availWidth - w;
+        let top = 0;
+        window.open("grafika2_aran.html", "grafika2",
+        "toolbar=no,directories=no,menubar=no,height="+h+",width="+w+",top="+top+",left="+left);
+    }
+
+    function WinOpen_aran_3(){
+        
+        let w = 200;
+        let h = 300;
+        let left = 0;
+        let top = screen.availHeight - h;
+        window.open("grafika3_aran.html", "grafika3",
+        "toolbar=no,directories=no,menubar=no,height="+h+",width="+w+",top="+top+",left="+left);
+    }
+
+    function WinOpen_aran_4(){
+       
+        let w = 200;
+        let h = 300;
+        let left = screen.availWidth - w;
+        let top = screen.availHeight - h;
+        window.open("grafika4_aran.html", "grafika4",
+        "toolbar=no,directories=no,menubar=no,height="+h+",width="+w+",top="+top+",left="+left);
+    }
+
+
+        
+    </script>
+
+    <p>Wykonał Tymur Aranzhii mój numer w dzienniku 2, czyli mam układ [(2) mod 4 = 2] układ 2</p>
+    <br>
+    <form >
+        <input type="button" name="grafika1" value="grafika1" onclick="WinOpen_aran_1()">
+        <input type="button" name="grafika2" value="grafika2" onclick="WinOpen_aran_2()">
+        <input type="button" name="grafika3" value="grafika3" onclick="WinOpen_aran_3()">
+        <input type="button" name="grafika4" value="grafika4" onclick="WinOpen_aran_4()"> <br> <br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_aran()"/> 
+    </form>
+</body>
 </html>
