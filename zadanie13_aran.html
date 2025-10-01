@@ -1,16 +1,17 @@
-<html>
-    <body>
-        <div style="color:red;font-size:50px;">
-            <script language="JavaScript">
-                var m_aran=prompt("m=","")
-                var b_aran;
-                var c_aran;
-                var a_aran=parseFloat(m_aran);
-                b_aran=a_aran+1;
-                c_aran=a_aran*(a_aran+1);
-                document.write("1/"+a_aran+"=1/"+b_aran+"+ 1/"+c_aran+"<br>");
-            </script>
-        </div>
-        <input type="button" value="zamknij okno" onclick="okno_zamknij_aran()"/>
-    </body>
+<!DOCTYPE html>
+ <head>
+ <meta charset="utf-8">
+ </head>
+ <script language="JavaScript">
+    var m_aran=prompt("m_aran=","");
+    var b_aran;
+    var c_aran;
+    var a_hus=parseInt(m_aran);
+    b_aran=a_aran+1;
+    c_aran=a_aran*(a_aran+1);
+    document.write("1/"+a_aran+" =1/"+b_aran+"+1/"+c_aran+"<br>");
+ </script>
+<body>
+    <input type="button" name="zamknij" value="zamknij" onclick="window.close()">
+</body>
 </html>
