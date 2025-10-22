@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Zadanie 25</title>
+<script language="JavaScript">
+function obliczN(No, t, T12) {
+ No = parseFloat(No);
+ t = parseFloat(t);
+ T12 = parseFloat(T12);
+ let lambda = Math.log(2) / T12;
+ let N = No * Math.exp(-lambda * t);
+ document.getElementsByName('wynikN')[0].value = N.toFixed(2);
+ document.getElementsByName('lambda')[0].value = lambda.toFixed(7);
+ pokaz1.innerHTML = "λ = " + lambda.toFixed(7) + " [1/rok]<br>";
+ pokaz2.innerHTML = "N = " + N.toFixed(2) + " [sztuk]";
+}
+</script>
+</head>
+<body>
+Oblicz ilość atomów N po czasie t
+<br><br>
+<form onsubmit="obliczN(this.No.value,this.t.value,this.T12.value);return false">
+ No = <input size="6" name="No">
+ t = <input size="6" name="t"> 
+ T1/2 = <input size="6" name="T12"> 
+ <br><br>
+ <input type="submit" value="Oblicz">
+ <br><br>
+ λ = <input size="12" name="lambda">
+ N = <input size="12" name="wynikN">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
