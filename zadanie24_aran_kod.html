@@ -1,3 +1,16 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  
 <html>
 <head>
 <title>Zadanie24</title>
@@ -21,10 +34,15 @@ function Y2(x1) {
 function Y3(x1) {
   x1_liczba = parseFloat(x1);
   x2 = (x1_liczba * Math.PI) / 180;
+
   Y3_p = Math.pow(x1_liczba, 5) + Math.pow(x2, 4);
   Y3 = Math.pow(Y3_p, 1 / 3) * Math.abs(x1_liczba - x2);
+
+ 
   document.getElementsByName('pole3')[0].value = Y3.toFixed(2);
   pokaz3.innerHTML = "y3 = " + Y3.toFixed(2);
+
+
   document.getElementsByName('x2out')[0].value = x2.toFixed(4);
 }
 </script>
@@ -59,3 +77,11 @@ return false">
 </table>
 </body>
 </html>
+
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

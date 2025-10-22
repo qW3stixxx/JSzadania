@@ -1,0 +1,69 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  
+<html>
+<head>
+<title>
+ Przykład obliczenia pole i obwod
+</title>
+ <script language="JavaScript">
+function Pole(a,b)
+{
+ a_liczba=parseFloat(a)
+ b_liczba=parseFloat(b)
+ Pole=(a*b)
+ document.getElementsByName('obj')[0].value=Pole.toFixed(2); /* na dokument */
+ alert("Pole="+Pole.toFixed(2)+" cm^2"); /*do okna Alert */
+ pokaz1.innerHTML="Pole="+Pole.toFixed(2)+" cm^2"+"<br>"; /* do tabeli */
+ }
+function Obwod(a,b)
+{
+ a_liczba=parseFloat(a)
+ b_liczba=parseFloat(b)
+ Obwod=(a+b)*2
+ document.getElementsByName('pole')[0].value=Obwod.toFixed(2);
+ alert("Obwod="+Obwod.toFixed(2)+" cm");
+ pokaz2.innerHTML="Obwod="+Obwod.toFixed(2)+"cm";
+}
+ </script>
+</head>
+<body>
+Pobliczanie Pola i Obwoda 
+<br> <br>
+<form name="formularz" action="..." onsubmit="Pole(this.promien.value,this.wysokosc.value);
+Obwod(this.promien.value,this.wysokosc.value);return false">
+ Podaj a=
+ <input size="6" name="promien">
+ Podaj b=
+ <input size="6" name="wysokosc">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ Pole=
+ <input size="6" name="obj">
+ Obwod=
+ <input size="6" name="pole">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 
