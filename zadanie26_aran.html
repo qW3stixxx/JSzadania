@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Zadanie 26</title>
+<script language="JavaScript">
+function Pow(a, b, h) {
+ a = parseFloat(a);
+ b = parseFloat(b);
+ h = parseFloat(h);
+ let pole = ((a + b) * h) / 2;
+ document.getElementsByName('pole')[0].value = pole.toFixed(2);
+ pokaz1.innerHTML = "Pole = " + pole.toFixed(2);
+}
+
+function Obw(a, b, h) {
+ a = parseFloat(a);
+ b = parseFloat(b);
+ h = parseFloat(h);
+ let podst = Math.abs(a - b) / 2;
+ let ramie = Math.sqrt(podst * podst + h * h);
+ let obwod = a + b + 2 * ramie;
+ document.getElementsByName('obwod')[0].value = obwod.toFixed(2);
+ pokaz2.innerHTML = "Obwód = " + obwod.toFixed(2);
+}
+</script>
+</head>
+<body>
+Pole i obwód trapezu równoramiennego
+<br><br>
+<form onsubmit="Pow_kowalski(this.a.value,this.b.value,this.h.value);Obw_kowalski(this.a.value,this.b.value,this.h.value);return false">
+ a = <input size="6" name="a">
+ b = <input size="6" name="b">
+ h = <input size="6" name="h">
+ <br><br>
+ <input type="submit" value="Oblicz">
+ <br><br>
+ Pole = <input size="6" name="pole">
+ Obwód = <input size="6" name="obwod">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
+</html>

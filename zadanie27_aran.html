@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Zadanie 27</title>
+<script language="JavaScript">
+function wysokosc(odl, s) {
+ odl = parseFloat(odl);
+ s = parseFloat(s);
+ let h = Math.sqrt(s * s - odl * odl);
+ document.getElementsByName('wysokosc')[0].value = h.toFixed(2);
+ pokaz1.innerHTML = "h = " + h.toFixed(2);
+}
+
+function kat(odl, s) {
+ odl = parseFloat(odl);
+ s = parseFloat(s);
+ let kat_rad = Math.asin(odl / s);
+ let kat_deg = kat_rad * (180 / Math.PI);
+ document.getElementsByName('kat')[0].value = kat_deg.toFixed(2);
+ pokaz2.innerHTML = "kąt = " + kat_deg.toFixed(2) + "°";
+}
+</script>
+</head>
+<body>
+Oblicz wysokość i kąt startu samolotu
+<br><br>
+<form onsubmit="wysokosc(this.odl.value,this.s.value);kat(this.odl.value,this.s.value);return false">
+ odl = <input size="6" name="odl">
+ s = <input size="6" name="s">
+ <br><br>
+ <input type="submit" value="Oblicz">
+ <br><br>
+ Wysokość = <input size="6" name="wysokosc">
+ Kąt = <input size="6" name="kat">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
