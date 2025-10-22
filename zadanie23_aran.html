@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>
+ Przykład obliczenia pole i obwod
+</title>
+ <script language="JavaScript">
+function drabina(x,d)
+{
+ x_liczba=parseFloat(x)
+ d_liczba=parseFloat(d)
+ drabina=math.sqrt(x*x+d*d)
+ document.getElementsByName('obj')[0].value=drabina.toFixed(2); /* na dokument */
+ alert("drabina="+drabina.toFixed(2)); /*do okna Alert */
+ pokaz1.innerHTML="drabina="+drabina.toFixed(2)+"<br>"; /* do tabeli */
+ }
+function Alfa(x,d)
+{
+ x_liczba=parseFloat(x)
+ d_liczba=parseFloat(d)
+ Alfa=math.atan(x)
+ document.getElementsByName('pole')[0].value=Alfa.toFixed(2);
+ alert("Alfa="+Alfa.toFixed(2)+" cm");
+ pokaz2.innerHTML="Alfa="+Alfa.toFixed(2);
+}
+ </script>
+</head>
+<body>
+Pobliczanie drobiny i alfy
+<br> <br>
+<form name="formularz" action="..." onsubmit=
+"drabina(this.promien.value,this.wysokosc.value);
+alfa(this.promien.value,this.wysokosc.value);return false">
+ Podaj x=
+ <input size="6" name="promien">
+ Podaj d=
+ <input size="6" name="wysokosc">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ Drabina=
+ <input size="6" name="obj">
+ Alfa=
+ <input size="6" name="pole">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
+</html>

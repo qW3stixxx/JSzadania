@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+ Zadanie24
+</title>
+ <script language="JavaScript">
+function Y1(x1)
+{
+ x1_liczba=parseFloat(x1);
+ x2=(x1*Math.PI)/180;
+ Y1=3*x1*Math.pow(x1,5/7);
+ document.getElementsByName('obj')[0].value=Y1.toFixed(2); /* na dokument */
+ pokaz1.innerHTML="y1="+Y1.toFixed(2)+"<br>"; /* do tabeli */
+ }
+function Y2(x1)
+{
+ x1_liczba=parseFloat(x1);
+ x2=(x1*Math.PI)/180;
+ Y2=2*Math.cos(x1_liczba)+3*Math.sin(x1_liczba);
+ document.getElementsByName('pole')[0].value=Y2.toFixed(2);
+ pokaz2.innerHTML="y2="+Y2.toFixed(2);
+}
+function Y3(x1)
+{
+ x1_liczba=parseFloat(x1);
+ x2=(x1*Math.PI)/180;
+ Y3_p=Math.pow(x1,5)+Math.pow(x2,4);
+ Y3=Math.pow(Y3_p,1/3)*Math.abs(x1-x2);
+ document.getElementsByName('pole')[0].value=Y3.toFixed(2);
+ pokaz3.innerHTML="y3="+Y3.toFixed(2);
+}
+ </script>
+</head>
+<body>
+Obliczenia y1,y2,y3
+<br> <br>
+<form name="formularz" action="..." onsubmit=
+"Y1(this.promien.value,this.wysokosc.value);
+Y2(this.promien.value,this.wysokosc.value);
+Y3(this.promien.value,this.wysokosc.value);
+return false">
+ Podaj x1=
+ <input size="6" name="promien">
+ x2=
+ <input size="6" name="wysokosc">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ y1=
+ <input size="6" name="obj">
+ y2=
+ <input size="6" name="pole">
+ y3=
+ <input size="6" name="pole">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+ <tr id="pokaz3"></tr>
+</table>
+</body>
+</html>
