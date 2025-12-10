@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie55 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 55 — zadanie pomocnicze: sprawdź czy liczba pierwsza</h2>
+<input id="p55_ara" placeholder="Podaj liczbę">
+<button onclick="zad55()">Sprawdź</button>
+<div id="wynik55"></div>
+
+<script>
+function zad55(){
+  var n = parseInt(document.getElementById('p55_ara').value,10);
+  if(isNaN(n) || n<2){ document.getElementById('wynik55').innerText="Podaj liczbę >=2"; return; }
+  for(var i=2;i*i<=n;i++){
+    if(n%i===0){ document.getElementById('wynik55').innerText = n + " nie jest pierwsza."; return; }
+  }
+  document.getElementById('wynik55').innerText = n + " jest liczbą pierwszą.";
+}
+</script>
+</body>
+</html>

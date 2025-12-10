@@ -1,0 +1,47 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  <!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie47 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 47 </h2>
+<button onclick="zad47()">Wczytaj boki</button>
+<div id="wynik47" style="margin-top:1rem"></div>
+
+<script>
+function zad47(){
+  var a,b,c;
+  while(true){
+    a = parseFloat(prompt("Podaj bok a (>0):",""));
+    b = parseFloat(prompt("Podaj bok b (>0):",""));
+    c = parseFloat(prompt("Podaj bok c (>0):",""));
+    if(!(a>0 && b>0 && c>0)){
+      alert("Boki muszą być > 0. Spróbuj ponownie.");
+      continue;
+    }
+    if(a + b > c && a + c > b && b + c > a) break;
+    alert("Boki nie spełniają nierówności trójkąta. Spróbuj ponownie.");
+  }
+  document.getElementById('wynik47').innerText = "Trójkąt z bokami: " + a + ", " + b + ", " + c;
+}
+</script>
+</body>
+</html>
+
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

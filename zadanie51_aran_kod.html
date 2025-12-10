@@ -1,0 +1,44 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  <!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie51 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 51 — modyfikacja: pytaj ile razy i jaki tekst</h2>
+<input id="ile_ara" placeholder="Ile razy?">
+<input id="tekst_ara" placeholder="Tekst (np. inicjały)">
+<button onclick="zad51()">Rysuj</button>
+<div id="wynik51" style="font-family:monospace;"></div>
+
+<script>
+function zad51(){
+  var ile = parseInt(document.getElementById('ile_ara').value,10);
+  var txt = document.getElementById('tekst_ara').value || "TA";
+  var out = document.getElementById('wynik51'); out.innerHTML="";
+  if(isNaN(ile) || ile<1){ out.innerText="Podaj dodatnią liczbę powtórzeń."; return; }
+  for(var r=0;r<ile;r++){
+    for(var s=0;s<=r;s++) out.innerHTML += "&nbsp;";
+    out.innerHTML += ile + "_" + txt + "_" + (r+1) + "<br>";
+  }
+}
+</script>
+</body>
+</html>
+
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie58 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 58 — wypisz wszystkie nieparzyste między dwoma liczbami</h2>
+<input id="x1_ara" placeholder="Liczba 1">
+<input id="x2_ara" placeholder="Liczba 2">
+<button onclick="zad58()">Pokaż nieparzyste</button>
+<pre id="wynik58"></pre>
+
+<script>
+function zad58(){
+  var a = parseInt(document.getElementById('x1_ara').value,10);
+  var b = parseInt(document.getElementById('x2_ara').value,10);
+  if(isNaN(a) || isNaN(b)){ document.getElementById('wynik58').innerText="Wprowadź dwie liczby."; return; }
+  var out = "";
+  if(a === b){ document.getElementById('wynik58').innerText="Liczby równe — brak obliczeń."; return; }
+  if(a < b){
+    
+    for(var i=a;i<=b;i++) if(i%2!==0) out += i + " ";
+    document.getElementById('wynik58').innerHTML = "<span style='color:green; font-size:20px'>"+out+"</span>";
+  } else {
+    
+    for(var j=a;j>=b;j--) if(j%2!==0) out += j + " ";
+    document.getElementById('wynik58').innerHTML = "<span style='color:blue; font-size:10px'>"+out+"</span>";
+  }
+}
+</script>
+</body>
+</html>\

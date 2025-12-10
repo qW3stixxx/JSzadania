@@ -1,0 +1,40 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  
+<!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie53 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 53 — (zadanie pomocnicze) suma liczb 1..N</h2>
+<input id="n53_ara" placeholder="Podaj N">
+<button onclick="zad53()">Policz sumę</button>
+<div id="wynik53"></div>
+
+<script>
+function zad53(){
+  var N = parseInt(document.getElementById('n53_ara').value,10);
+  if(isNaN(N) || N<1){ document.getElementById('wynik53').innerText="Podaj N>=1"; return; }
+  var sum=0;
+  for(var i=1;i<=N;i++) sum += i;
+  document.getElementById('wynik53').innerText = "Suma 1.."+N+" = "+sum;
+}
+</script>
+</body>
+</html>
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

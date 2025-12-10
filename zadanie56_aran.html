@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie56 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 56 </h2>
+<p></p>
+<button onclick="zad56()">Znajdź 40</button>
+<pre id="wynik56"></pre>
+
+<script>
+function isPrime(n){
+  if(n<2) return false;
+  for(var i=2;i*i<=n;i++) if(n%i===0) return false;
+  return true;
+}
+function zad56(){
+  var found = 0, i=2, out="";
+  while(found<40){
+    if(isPrime(i)){ out += "i=" + found + " -> " + i + "\n"; found++; }
+    i++;
+  }
+  document.getElementById('wynik56').innerText = out;
+}
+</script>
+</body>
+</html>

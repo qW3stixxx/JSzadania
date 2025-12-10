@@ -1,0 +1,38 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  <!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie50 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 50 — wypisz liczby 1..10 przesunięte spacjami (zagnieżdżone pętle)</h2>
+<div id="wynik50" style="font-family:monospace; font-size:18px"></div>
+<script>
+var out = document.getElementById('wynik50');
+out.innerHTML += "<div style='font-size:2cm;color:red'>Aranzhii</div>";
+out.innerHTML += "<div style='font-size:5mm;color:blue'>Zadanie: Pętle zagnieżdżone</div><br>";
+for(var i=1;i<=10;i++){
+  var line = "";
+  for(var k=1;k<=i;k++) line += "&nbsp;";
+  out.innerHTML += line + i + "<br>";
+}
+</script>
+</body>
+</html>
+
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

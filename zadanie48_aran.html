@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie48 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 48 — suma szeregu harmonicznego (1..N). UWAGA: dla dużego N może trwać</h2>
+<input id="N_ara" placeholder="Podaj N (np. 1000000)">
+<button onclick="zad48()">Oblicz sumę</button>
+<div id="wynik48" style="margin-top:1rem; font-family:monospace"></div>
+
+<script>
+function zad48(){
+  var N = parseInt(document.getElementById('N_ara').value,10);
+  if(isNaN(N) || N<1){ document.getElementById('wynik48').innerText="Podaj N >= 1"; return; }
+  var suma = 0.0;
+  for(var ara_i=1; ara_i<=N; ara_i++){
+    suma += 1/ara_i;
+    
+  }
+  document.getElementById('wynik48').innerText = "Suma dla N="+N+" = "+suma;
+}
+</script>
+</body>
+</html>

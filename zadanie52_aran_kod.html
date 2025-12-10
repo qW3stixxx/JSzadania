@@ -1,0 +1,43 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  <!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie52 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 52 — rysowanie prostokąta z gwiazdek (pętle)</h2>
+<button onclick="zad52()">Rysuj prostokąt</button>
+<div id="wynik52" style="font-family:monospace; white-space:pre;"></div>
+
+<script>
+function zad52(){
+  var lenNaz = "Aranzhii".length;
+  var a = (lenNaz % 4) + 5;
+  var b = (lenNaz % 3) + 3;
+  var out = "";
+  for(var r=0;r<b;r++){
+    for(var c=0;c<a;c++) out += "*";
+    out += "\n";
+  }
+  document.getElementById('wynik52').innerText = out;
+}
+</script>
+</body>
+</html>
+
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

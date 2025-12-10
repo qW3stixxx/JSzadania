@@ -1,0 +1,43 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  <!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie49 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 49 — silnia n! (przykładowая реализация)</h2>
+<input id="n_ara" placeholder="Podaj n (>=0)">
+<button onclick="zad49()">Oblicz n!</button>
+<div id="wynik49" style="margin-top:1rem"></div>
+
+<script>
+function zad49(){
+  var n = parseInt(document.getElementById('n_ara').value,10);
+  if(isNaN(n) || n<0){ document.getElementById('wynik49').innerText="Podaj n >= 0"; return; }
+  var silnia = 1;
+  if(n===0) silnia = 1;
+  else {
+    for(var ara_i=1; ara_i<=n; ara_i++) silnia *= ara_i;
+  }
+  document.getElementById('wynik49').innerText = n + "! = " + silnia;
+}
+</script>
+</body>
+</html>
+
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,51 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+<!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie45 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 45 </h2>
+<input id="liczba_wczytana_ara" placeholder="Wprowadź liczbę">
+<button onclick="zad45()">Uruchom</button>
+<div id="wynik45" style="margin-top:1rem"></div>
+
+<script>
+function zad45(){
+  var v = parseInt(document.getElementById('liczba_wczytana_ara').value,10);
+  var out = document.getElementById('wynik45'); out.innerHTML="";
+  if(isNaN(v)){ out.innerText="Podaj liczbę."; return; }
+  var lenNaz = "Aranzhii".length;
+  var ile = (lenNaz % 4) + 10;
+  var size = (lenNaz % 3) + 40;
+  out.innerHTML = "ilość wykonania pętli = "+ile+"<br>wielkość liter = "+size+"px<br><br>";
+  var tekstDo = (v % 2 === 0) ? "nazwisko" : "imię";
+  for(var ara_i=1; ara_i<=ile; ara_i++){
+    if(v % 2 === 0){
+      out.innerHTML += "<p style='color:blue;font-size:"+size+"px'>Aranzhii</p>";
+    } else {
+      out.innerHTML += "<p style='color:green;font-size:"+size+"px'>Tymur</p>";
+    }
+  }
+}
+</script>
+</body>
+</html>
+  
+
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

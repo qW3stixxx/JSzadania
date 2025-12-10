@@ -1,0 +1,103 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 38  - Tymur Aranzhii</title>
+</head>
+<body>
+<script>
+
+
+var liczba1_ara = 5;
+var liczba2_ara = 5 + 7; 
+var liczba3_ara = 8;
+var liczba4_ara = 8 + 4; 
+
+document.write('<p style="font-size:40px; color:green; background:silver;">Tymur Aranzhii</p>');
+document.write(
+  '<p style="font-size:40px; color:green; background:silver;">' +
+  'liczba1=' + liczba1_ara + ' liczba2=' + liczba2_ara +
+  ' liczba3=' + liczba3_ara + ' liczba4=' + liczba4_ara +
+  '</p>'
+);
+
+
+document.write('<p style="font-size:40px; color:red; background:silver;">MENU:</p>');
+document.write('<p style="font-size:40px; color:red; background:silver;">' + liczba1_ara +
+               ' - teoria operatorów logicznych</p>');
+
+document.write('<p style="font-size:40px; color:red; background:silver;">' + (liczba3_ara + 20) +
+               ' - sprawdzanie czy liczba należy do przedziału (' + liczba3_ara + ';' + liczba4_ara + ']</p>');
+
+document.write('<p style="font-size:40px; color:red; background:silver;">68 - sprawdzanie przedziałów (-∞ ,' +
+               liczba1_ara + ') lub [' + liczba2_ara + ', +∞ )</p>');
+
+
+var opcja_ara = parseFloat(prompt("Podaj numer opcji:", ""));
+
+
+if (opcja_ara == liczba1_ara) {
+
+    document.write('<font color="blue" size="7">Jesteś w opcji ' + liczba1_ara + ' → teoria</font><br>');
+    document.write('<p>&& — AND (i)</p>');
+    document.write('<p>|| — OR (lub)</p>');
+    document.write('<p>! — NOT (zaprzeczenie)</p>');
+
+}
+
+
+else if (opcja_ara == liczba3_ara + 20) {
+
+    var x_ara = parseFloat(prompt("Podaj liczbę do sprawdzenia:", ""));
+
+    if (x_ara > liczba3_ara && x_ara <= liczba4_ara) {
+        document.write('<p>Liczba ' + x_ara + ' należy do przedziału (' +
+                       liczba3_ara + ';' + liczba4_ara + ']</p>');
+    } else {
+        document.write('<p>Liczba ' + x_ara + ' NIE należy do przedziału (' +
+                       liczba3_ara + ';' + liczba4_ara + ']</p>');
+    }
+
+}
+
+else if (opcja_ara == 68) {
+
+    var y_ara = parseFloat(prompt("Podaj liczbę:", ""));
+
+    if (y_ara < liczba1_ara || y_ara >= liczba2_ara) {
+        document.write('<p>Liczba ' + y_ara + ' należy do przedziału (-∞ , ' +
+                       liczba1_ara + ') lub [' + liczba2_ara + ', +∞ )</p>');
+    } else {
+        document.write('<p>Liczba ' + y_ara + ' NIE należy do tych przedziałów.</p>');
+    }
+
+}
+
+
+else {
+    document.write('<font color="red" size="7">Nie ma takiej opcji!</font>');
+}
+
+</script>
+</body>
+</html>
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 

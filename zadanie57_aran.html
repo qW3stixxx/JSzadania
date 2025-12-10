@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie57 - Aranzhii</title></head>
+<body>
+<h2>Zadanie 57 — liczby i ich pierwiastki 2. i 4. stopnia</h2>
+<input id="start57" placeholder="Podaj start (np. 2)">
+<button onclick="zad57()">Pokaż</button>
+<pre id="wynik57"></pre>
+
+<script>
+function zad57(){
+  var start = parseInt(document.getElementById('start57').value,10);
+  if(isNaN(start)){ document.getElementById('wynik57').innerText = "Podaj liczbę startową."; return; }
+  var out="";
+  for(var i=start; i<=start+15; i++){
+    var p2 = Math.sqrt(i).toFixed(2);
+    var p4 = Math.sqrt(p2).toFixed(2); 
+    out += "I=" + i + " pierw_2(" + i + ")=" + p2 + "  pierw_4(" + i + ")=" + parseFloat(Math.sqrt(Math.sqrt(i)).toFixed(2)) + "\n";
+  }
+  document.getElementById('wynik57').innerText = out;
+}
+</script>
+</body>
+</html>

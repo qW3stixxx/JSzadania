@@ -1,0 +1,51 @@
+<html> 
+ <head> 
+    <script type="text/javascript"> 
+         function okno_zamknij_siejka() 
+             { 
+                     window.close() 
+             }
+     </script> 
+ </head> 
+<body> 
+    <form> 
+         <textarea name="siejka" cols="80" rows="20" readonly> 
+  
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 59 </TITLE>
+</head>
+<body>
+<script language="JavaScript">
+var R= parseFloat(prompt("Podaj promień koła R:", ""));
+var N = 0;
+var R_int_ = Math.floor(R);
+for(i = Math.floor(-R-1); i <= Math.floor(R+1); i++)
+{
+for(j = Math.floor(-R-1); j <= Math.floor(R+1); j++)
+{
+if(i*i + j*j<= R*R)
+{
+N++;
+}
+}
+}
+document.write("Promień koła R = " + R + "<br>");
+document.write("Liczba punktów kratowych N(R) = " + N + "<br>");
+</script>
+</body>
+</html>
+
+                  </script> 
+ </div>
+ </body> 
+</html>
+           </textarea> 
+</form> 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/> 
+<script type="text/javascript"> 
+</script> 
+</body> 
+</html> 
