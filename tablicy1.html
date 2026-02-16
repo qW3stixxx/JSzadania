@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wszystkie zadania - Poziomy 1-4</title>
+</head>
+<body>
+    <h1>Zadania z tablic - Poziomy 1-4</h1>
+
+    <script>
+        
+
+        const imiona = ["Ewa", "Marek", "Zofia", "Adam", "Julia"];
+        document.write("<h1>Zadanie 1:</h1>");
+        document.write("Długosc tablicy: " + imiona.length);
+        document.write("Pierwsze imię: " + imiona[0]);
+        document.write("Ostatnie imię: " + imiona[imiona.length - 1]);
+        let arr = [3,7,1,9,4];
+        function sumaTablicy(arr) {
+            let suma = 0;
+            for (let i = 0; i < arr.length; i++) {
+                suma += arr[i];
+            }
+            return suma;
+        }
+        document.write("<h1>Zadanie 2:</h1>");
+        document.write("Suma [3,7,1,9,4]: " + sumaTablicy([3,7,1,9,4]));
+
+        const arr_1 = [3,7,1,9,4];
+        let max = arr_1[0];
+        for (let i = 1; i < arr_1.length; i++) {
+            if (arr_1[i] > max) {
+                max = arr_1[i];
+            }
+        }
+        document.write("<h1>Zadanie 3:</h1>");
+        document.write("Największa liczba: " + max);
+
+        const arr_2 = [7, 10, 2, 6, 13];
+        arr_2.unshift(0);
+        arr_2.push(6);
+        document.write("<h1>Zadanie 4:</h1>");
+        document.write("Tablica po dodaniu elementów: [" + arr_2 + "]</p>");
+
+        document.write("<h1>Czesc 2</h1>");
+
+        const oceny = [ 2, 3, 5, 4, 1, 5];
+        let sumaOcen = 0;
+        let pozytywne = [];
+        for (let i = 0; i < oceny.length; i++) {
+            sumaOcen += oceny[i];
+            if (oceny[i] > 3) {
+                pozytywne.push(oceny[i]);
+            }
+        }
+        const sredniaOcen = sumaOcen / oceny.length;
+        document.write("<h3>Zadanie 1:</h3>");
+        document.write("Średnia ocen: " + sredniaOcen.toFixed(2) + "</p>");
+        document.write("<p>Oceny pozytywne: [" + pozytywne + "]</p>");
+
+        function parz() {
+            const parzyste = [2,5,6,4,3,4];
+            for (let i = 0; i < tablica.length; i++) {
+                if (tablica[i] % 2 === 0) {
+                    parzyste.push(tablica[i]);
+                }
+            }
+            return parzyste;
+        }
+        document.write("<h1>Zadanie 2:</h1>");
+        document.write("<p>Parzyste z [2, 5, 8, 11, 14, 17]: [" + parz + "]</p>");
+
+        const technologie = ["JavaScript", "Python", "Java"];
+        const odwrocone = [];
+        for (let i = technologie.length - 1; i >= 0; i--) {
+            odwrocone.push(technologie[i]);
+        }
+        document.write("<h1>Zadanie 3:</h1>");
+        document.write("<p>Odwrócona tablica: [" + odwrocone + "]</p>");
+
+        function czyZawiera(tablica, szukany) {
+            for (let i = 0; i < tablica.length; i++) {
+                if (tablica[i] === szukany) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        document.write("<h1>Zadanie 4:</h1>");
+        document.write("Czy [2, 4, 6, 8, 10] zawiera 6? " + czyZawiera([2, 4, 6, 8, 10], 6));
+        document.write("Czy [2, 4, 6, 8, 10] zawiera 5? " + czyZawiera([2, 4, 6, 8, 10], 5));
+
+        document.write("<h1>czesc 3</h1>");
+
+        const liczby2 = [3, 6, 9, 12, 15];
+        const kwadraty = [];
+        for (let i = 0; i < liczby2.length; i++) {
+            kwadraty.push(liczby2[i] * liczby2[i]);
+        }
+        document.write("<h3>Zadanie 1:</h3>");
+        document.write("<p>Kwadraty: [" + kwadraty + "]</p>");
+
+        const imiona2 = ["Robert", "Ela", "Krzysztof", "Ola", "Magdalena"];
+        const dlugieImiona = [];
+        for (let i = 0; i < imiona2.length; i++) {
+            if (imiona2[i].length > 3) {
+                dlugieImiona.push(imiona2[i]);
+            }
+        }
+        document.write("<h1>Zadanie 2:</h1>");
+        document.write("Imiona dłuższe niż 3 znaki: [" + dlugieImiona + "]");
+
+        const cyfry = [4, 8, 12];
+        let lancuch = "";
+        for (let i = 0; i < cyfry.length; i++) {
+            lancuch += cyfry[i];
+            if (i < cyfry.length - 1) {
+                lancuch += " - ";
+            }
+        }
+        document.write("<h1>Zadanie 3:</h1>");
+        document.write("<p>String z tablicy: " + lancuch + "</p>");
+
+        document.write("<h1>Czesc4</h1>");
+
+        const uczniowie = [
+            { imie: "Tomek", punkty: 65 },
+            { imie: "Kasia", punkty: 48 },
+            { imie: "Michał", punkty: 88 },
+            { imie: "Zuzia", punkty: 32 }
+        ];
+
+        document.write("<h1>Zadanie 1:</h1>");
+        document.write("Uczniowie, którzy zdali (>= 50 pkt):");
+        
+        let sumaPunktow = 0;
+        for(let i = 0; i < uczniowie.length; i++) {
+            if(uczniowie[i].punkty >= 50) {
+                document.write("<p>- " + uczniowie[i].imie + "</p>");
+            }
+            sumaPunktow += uczniowie[i].punkty;
+        }
+        
+        let sredniaPunktow = sumaPunktow / uczniowie.length;
+        document.write("<p>Średnia punktów: " + sredniaPunktow.toFixed(2) + "</p>");
+
+        function usunDuplikaty(tablica) {
+            const unikalne = [];
+            for (let i = 0; i < tablica.length; i++) {
+                let czyIstnieje = false;
+                for (let j = 0; j < unikalne.length; j++) {
+                    if (tablica[i] === unikalne[j]) {
+                        czyIstnieje = true;
+                        break;
+                    }
+                }
+                if (!czyIstnieje) {
+                    unikalne.push(tablica[i]);
+                }
+            }
+            return unikalne;
+        }
+        const zDuplikatami = [3, 5, 3, 7, 2, 5, 8, 2, 9];
+        document.write("<h1>Zadanie 2:</h1>");
+        document.write("Tablica oryginalna: [" + zDuplikatami + "]");
+        document.write("Tablica bez duplikatów: [" + usunDuplikaty(zDuplikatami) + "]");
+
+        const zakupy = ["jabłka", "mleko", "chleb", "jabłka", "ser", "mleko", "masło"];
+        const produkty = [];
+        const liczniki = [];
+        
+        for(let i = 0; i < zakupy.length; i++) {
+            let produkt = zakupy[i];
+            let znaleziony = -1;
+            
+            for(let j = 0; j < produkty.length; j++) {
+                if(produkty[j] === produkt) {
+                    znaleziony = j;
+                    break;
+                }
+            }
+            
+            if(znaleziony === -1) {
+                produkty.push(produkt);
+                liczniki.push(1);
+            } else {
+                liczniki[znaleziony]++;
+            }
+        }
+        
+        document.write("<h3>Zadanie 3:</h3>");
+        document.write("<p>Ilość wystąpień produktów:</p>");
+        for(let i = 0; i < produkty.length; i++) {
+            document.write("<p>" + produkty[i] + ": " + liczniki[i] + "</p>");
+        }
+    </script>
+</body>
+</html>
