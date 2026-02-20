@@ -1,0 +1,81 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Wszystkie zadania - Poziomy 1-4</title>
+</head>
+<body>
+    <h1>Zadania z tablic - Poziomy 1-4(4)</h1>
+    <script>
+ const uczniowie = [
+            { imie: "Ola", punkty: 78 },
+            { imie: "Jan", punkty: 45 },
+            { imie: "Ania", punkty: 92 }
+            
+        ];
+
+        document.write("<h2>Zadanie 1:</h2>");
+        document.write("Uczniowie, którzy zdali (>= 50 pkt):");
+        
+        let sumaPunktow = 0;
+        for(let i = 0; i < uczniowie.length; i++) {
+            if(uczniowie[i].punkty >= 50) {
+                document.write("- " + uczniowie[i].imie );
+            }
+            sumaPunktow += uczniowie[i].punkty;
+        }
+        
+        let sredniaPunktow = sumaPunktow / uczniowie.length;
+        document.write("<br>"+"Średnia punktów: " + sredniaPunktow.toFixed(2) );
+
+        function usunDuplikaty(tablica) {
+            const unikalne = [];
+            for (let i = 0; i < tablica.length; i++) {
+                let czyIstnieje = false;
+                for (let j = 0; j < unikalne.length; j++) {
+                    if (tablica[i] === unikalne[j]) {
+                        czyIstnieje = true;
+                        break;
+                    }
+                }
+                if (!czyIstnieje) {
+                    unikalne.push(tablica[i]);
+                }
+            }
+            return unikalne;
+        }
+        const zDuplikatami = [1,2,2,3,4,4,5];
+        document.write("<h2>Zadanie 2:</h2>");
+        document.write("Tablica oryginalna: [" + zDuplikatami + "]"+"<br>");
+        document.write("Tablica bez duplikatów: [" + usunDuplikaty(zDuplikatami) + "]");
+
+        const zakupy = [ "chleb","mleko", "ser",  "chleb","mleko"];
+        const produkty = [];
+        const liczniki = [];
+        
+        for(let i = 0; i < zakupy.length; i++) {
+            let produkt = zakupy[i];
+            let znaleziony = -1;
+            
+            for(let j = 0; j < produkty.length; j++) {
+                if(produkty[j] === produkt) {
+                    znaleziony = j;
+                    break;
+                }
+            }
+            
+            if(znaleziony === -1) {
+                produkty.push(produkt);
+                liczniki.push(1);
+            } else {
+                liczniki[znaleziony]++;
+            }
+        }
+        
+        document.write("<h2>Zadanie 3:</h2>");
+        document.write("Ilość wystąpień produktów:"+"<br>");
+        for(let i = 0; i < produkty.length; i++) {
+            document.write(produkty[i] + ": " + liczniki[i] +"<br>");
+        }
+                </script>
+</body>
+</html>

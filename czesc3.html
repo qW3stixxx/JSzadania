@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Wszystkie zadania - Poziomy 1-4</title>
+</head>
+<body>
+    <h1>Zadania z tablic - Poziomy 1-4(3)</h1>
+
+    <script>
+ const liczby2 = [1,2,3,4,5];
+        const kwadraty = [];
+        for (let i = 0; i < liczby2.length; i++) {
+            kwadraty.push(liczby2[i] * liczby2[i]);
+        }
+        document.write("<h2>Zadanie 1:</h2>");
+        document.write("Kwadraty: [" + kwadraty + "]");
+
+        const imiona2 = ["Anna","Jan" , "Krzysztof", "Ola"];
+        const dlugieImiona = [];
+        for (let i = 0; i < imiona2.length; i++) {
+            if (imiona2[i].length > 3) {
+                dlugieImiona.push(imiona2[i]);
+            }
+        }
+        document.write("<h2>Zadanie 2:</h2>");
+        document.write("Imiona dłuższe niż 3 znaki: [" + dlugieImiona + "]");
+
+        const cyfry = [5, 10, 15];
+        let lancuch = "";
+        for (let i = 0; i < cyfry.length; i++) {
+            lancuch += cyfry[i];
+            if (i < cyfry.length - 1) {
+                lancuch += " - ";
+            }
+        }
+        document.write("<h2>Zadanie 3:</h2>");
+        document.write("String z tablicy: " + lancuch );
+               </script>
+</body>
+</html>

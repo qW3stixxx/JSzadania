@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wszystkie zadania - Poziomy 1-4</title>
+</head>
+<body>
+    <h1>Zadania z tablic - Poziomy 1-4(2)</h1>
+
+    <script>
+         const oceny = [ 2, 3, 5, 4, 1, 5];
+        let sumaOcen = 0;
+        let pozytywne = [];
+        for (let i = 0; i < oceny.length; i++) {
+            sumaOcen += oceny[i];
+            if (oceny[i] > 3) {
+                pozytywne.push(oceny[i]);
+            }
+        }
+        const sredniaOcen = sumaOcen / oceny.length;
+        document.write("<h2>Zadanie 1:</h2>");
+        document.write("Średnia ocen: " + sredniaOcen.toFixed(2)+"<br>");
+        document.write("Oceny pozytywne: [" + pozytywne + "]");
+
+        function parz(tablica) {
+            let parzyste = [];
+            for (let i = 0; i < tablica.length; i++) {
+                if (tablica[i] % 2 === 0) {
+                    parzyste.push(tablica[i]);
+                }
+            }
+            return parzyste;
+          
+        }
+        let liczby = [1,2,3,4,5,6];
+        document.write("<h2>Zadanie 2:</h2>");
+        document.write("Parzyste z [1,2,3,4,5,6]: [" + parz(liczby) + "]");
+
+        const technologie = ["JavaScript", "Python", "Java"];
+        const odwrocone = [];
+        for (let i = technologie.length - 1; i >= 0; i--) {
+            odwrocone.push(technologie[i]);
+        }
+        document.write("<h2>Zadanie 3:</h2>");
+        document.write("Odwrócona tablica: [" + technologie[i] + "]");
+
+        function czyZawiera(tablica, szukany) {
+            for (let i = 0; i < tablica.length; i++) {
+                if (tablica[i] === szukany) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        document.write("<h2>Zadanie 4:</h2>");
+        document.write("Czy [2, 4, 6, 8, 10] zawiera 6? " + czyZawiera([2, 4, 6, 8, 10], 6)+"<br>");
+        document.write("Czy [2, 4, 6, 8, 10] zawiera 5? " + czyZawiera([2, 4, 6, 8, 10], 5));
+
+             </script>
+</body>
+</html>

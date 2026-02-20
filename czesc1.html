@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wszystkie zadania - Poziomy 1-4</title>
+</head>
+<body>
+    <h1>Zadania z tablic - Poziomy 1-4(1)</h1>
+
+    <script>
+        
+
+        const imiona = ["Ewa", "Marek", "Zofia", "Artem", "Oleksandr"];
+        document.write("<h2>Zadanie 1:</h2>");
+        document.write("Długosc tablicy: " + imiona.length+"<br>");
+        document.write("Pierwsze imię: " + imiona[0]+"<br>");
+        document.write("Ostatnie imię: " + imiona[imiona.length - 1]+"<br>");
+        let arr = [3,7,1,9,4];
+        function sumaTablicy(arr) {
+            let suma = 0;
+            for (let i = 0; i < arr.length; i++) {
+                suma += arr[i];
+            }
+            return suma;
+        }
+        document.write("<h2>Zadanie 2:</h2>");
+        document.write("Suma [3,7,1,9,4]: " + sumaTablicy([3,7,1,9,4]));
+
+        const arr_1 = [3,7,1,9,4];
+        let max = arr_1[0];
+        for (let i = 1; i < arr_1.length; i++) {
+            if (arr_1[i] > max) {
+                max = arr_1[i];
+            }
+        }
+        document.write("<h2>Zadanie 3:</h2>");
+        document.write("Największa liczba: " + max);
+
+        const arr_2 = [7, 10, 2, 6, 13];
+        arr_2.unshift(0);
+        arr_2.push(6);
+        document.write("<h2>Zadanie 4:</h2>");
+        document.write("Tablica po dodaniu elementów: [" + arr_2 + "]</p>");
+           </script>
+</body>
+</html>

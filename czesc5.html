@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wszystkie zadania - Poziomy 1-4</title>
+</head>
+<body>
+    <h1>Zadania z tablic - Poziomy 1-4(1)</h1>
+
+    <script>
+        
+
+      let arr = [3,7,1,9,4];
+        function druganajw(arr,drug) {
+        
+        let drug =[];
+            let suma = 0;
+            let max = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if(max>arr[i]){
+                    max=arr[i];
+                    drug.push(arr[i]);
+                }
+            }
+            return arr ;
+        }
+        document.write("<h2>Zadanie 1:</h2>");
+        document.write("Tab [3,7,1,9,4]: " + druganajw([3,7,1,9,4]));
+         document.write("Naijweksze 2 "+drug[drug.length-2]);
+
+        const arr_1 = [3,7,1,9,4];
+        let max = arr_1[0];
+        for (let i = 1; i < arr_1.length; i++) {
+            if (arr_1[i] > max) {
+                max = arr_1[i];
+            }
+        }
+        document.write("<h2>Zadanie 3:</h2>");
+        document.write("Największa liczba: " + max);
+
+        const arr_2 = [7, 10, 2, 6, 13];
+        arr_2.unshift(0);
+        arr_2.push(6);
+        document.write("<h2>Zadanie 4:</h2>");
+        document.write("Tablica po dodaniu elementów: [" + arr_2 + "]</p>");
+           </script>
+</body>
+</html>
